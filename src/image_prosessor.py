@@ -31,7 +31,6 @@ class ProcesadorImagen:
         return np.transpose(self.imagen, (1, 0, 2))
 
     def ajustar_contraste(self, alfa: float):
-        # Aseguramos que los valores se mantengan entre 0 y 255
         imagen_ajustada = np.clip(self.imagen * alfa, 0, 255).astype(np.uint8)
         return imagen_ajustada
 
