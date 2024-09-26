@@ -31,39 +31,41 @@ Before running this project, you need to have Python installed. The project uses
 Setup Instructions
 Clone or download the project: If you're using Git, clone the repository:
 
-'''bash
+```bash
 git clone <repository-url>
-'''
+```
 Or download the project manually as a ZIP and unzip it.
 
 Navigate to the project directory:
 
-'''bash
+```bash
 
 cd ImageProcessorProject
+```
 Install the dependencies:
 
 Make sure you have pip installed, then run:
 
-'''bash
+```bash
 
 pip install -r requirements.txt
-'''
+```
 Update image paths:
 
 Open main.py and update the paths for image_path1 and image_path2 with the actual paths to your images:
 
-
+```python 
 image_path1 = 'path/to/your/image1.jpg'  # Update this path
 image_path2 = 'path/to/your/image2.jpg'  # Update this path
+```
 Run the project:
 
 Execute the main script:
 
-'''bash
+```bash
 
 python main.py
-'''
+```
 Usage
 The program will load the specified images, perform various processing tasks, and display the results in different windows.
 You can press any key to close the image windows after viewing them.
