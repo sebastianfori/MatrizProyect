@@ -1,5 +1,5 @@
 from image_prosessor import ProcesadorImagen
-from matrix_operator import OperacionesMatrices
+from matrix_operator import MatrixOperations
 from utils import mostrar_imagen, guardar_imagen
 
 def main():
@@ -25,20 +25,20 @@ def main():
     mostrar_imagen(imagen2_gris, "Imagen 2 en Escala de Grises")
 
 
-    inversa_imagen1 = OperacionesMatrices.verificar_inversa(imagen1_gris)
+    inversa_imagen1 = MatrixOperations.check_reverse(imagen1_gris)
     if inversa_imagen1 is not None:
         print("La imagen 1 tiene inversa.")
     else:
         print("La imagen 1 no tiene inversa.")
 
-    imagen1_alfa_mayor_1 = OperacionesMatrices.multiplicar_por_escalar(imagen1_gris, 1.5)  # Contraste aumentado
+    imagen1_alfa_mayor_1 = MatrixOperations.multiply_by_scalar(imagen1_gris, 1.5)  # Contraste aumentado
     mostrar_imagen(imagen1_alfa_mayor_1, "Imagen con Contraste Aumentado (α > 1)")
 
-    imagen1_alfa_menor_1 = OperacionesMatrices.multiplicar_por_escalar(imagen1_gris, 0.5)  # Contraste reducido
+    imagen1_alfa_menor_1 = MatrixOperations.multiply_by_scalar(imagen1_gris, 0.5)  # Contraste reducido
     mostrar_imagen(imagen1_alfa_menor_1, "Imagen con Contraste Reducido (0 < α < 1)")
 
 
-    imagen1_volteada = OperacionesMatrices.voltear_imagen_eje_x(imagen1_gris)
+    imagen1_volteada = MatrixOperations.turn_image_x_axis(imagen1_gris)
     mostrar_imagen(imagen1_volteada, "Imagen Volteada")
 
     imagen1_negativa = procesador1.calcular_negativo()
